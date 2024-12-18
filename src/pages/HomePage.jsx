@@ -1,14 +1,12 @@
 import '../index.css';
 import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
-import Services from '../components/Service';
 import BentoGrid from '../components/BentoGrid';
 import Timeline from '../components/Timeline';
 import Portfolio from '../components/Portfolio';
-import FAQSection from '../components/Faq';
 import Footer from '../components/Footer';
 import ServiceSection from '../components/ServiceSection';
-
+import Form from '../components/Form';
 function HomePage() {
   return (
     <>
@@ -17,8 +15,8 @@ function HomePage() {
       <ServiceSection />
       <BentoGrid />
       <Timeline />  
+      <Form />
       <Portfolio />
-      <FAQSection />
       <Footer />
     </>
   );  

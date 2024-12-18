@@ -17,9 +17,9 @@ const ServiceSection = () => {
             <Globe className="w-12 h-12 text-violet-600 mb-6" />
             <h3 className="text-violet-500 text-2xl font-bold mb-4">Activá</h3>
             <p className="text-violet-300">
-              Tu presencia digital en buscadores de forma orgánica. Daremos
-              dinamismo a tus contenidos para que tu negocio se posicione mejor
-              en los resultados de búsqueda.
+              tu <span className="text-violet-100 font-semibold">presencia digital</span> en buscadores de forma orgánica. Daremos
+              dinamismo a tus contenidos para que tu negocio se <span className="text-violet-100 font-semibold">posicione mejor
+              en los resultados de búsqueda</span>.
             </p>
           </motion.div>
 
@@ -49,7 +49,7 @@ const ServiceSection = () => {
             <Users className="w-12 h-12 text-violet-600 mb-6" />
             <h3 className="text-violet-500 text-2xl font-bold mb-4">Conectá</h3>
             <p className="text-violet-300">
-              Tu negocio al mundo digital con herramientas de recolección de
+              tu negocio al mundo digital con herramientas de recolección de
               datos y conversión de interesados en clientes.
             </p>
           </motion.div>
