@@ -19,13 +19,16 @@ const MarketingPortfolio = () => {
             {items.map(({ id, category, title, image, backgroundColor }) => (
               <div
                 key={id}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
+                 className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-shadow duration-300"
               >
-                <Link to={`/portfolio/${title.replace(/\s+/g, '-').toLowerCase()}`} className="w-full h-64 relative">
+                <Link to={`/portfolio/${title.replace(/\s+/g, '-').toLowerCase()}`} className="block w-full h-64 relative overflow-hidden ">
                   <img
                     src={image}
                     alt={title}
-                    className="w-full h-full object-cover"
+                    title={title}
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-cover "
                     style={{
                       backgroundColor: backgroundColor,
                     }}
