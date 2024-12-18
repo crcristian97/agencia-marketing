@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowRight, Users, Target, ChartBarBig } from 'lucide-react';
 import imgHomeSeccion from '../img/imgHomeCTA.webp'
 
@@ -8,7 +9,13 @@ export default function HeroSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 relative">
           
-          <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
+          <motion.div
+            className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <div className="lg:py-24">
               <h1 className="text-2xl font-bold tracking-tight text-black sm:text-3xl lg:mt-6 xl:text-5xl">
                 <span className="block">Tus clientes buscan lo que necesitan.</span>
@@ -51,9 +58,15 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="mt-12 lg:mt-32 max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+          <motion.div
+            className="mt-12 lg:mt-32 max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <img 
               src={imgHomeSeccion}
               alt="Casos de éxito en desarrollo web y marketing digital - We Make It Lab"
@@ -64,7 +77,7 @@ export default function HeroSection() {
               className="w-full h-auto rounded-lg shadow-lg object-cover hover:shadow-xl transition-shadow duration-300"
               decoding="async"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

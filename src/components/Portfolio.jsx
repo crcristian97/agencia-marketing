@@ -8,7 +8,7 @@ const MarketingPortfolio = () => {
       <header className="py-20 bg-black text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold text-violet-600 mb-4 tracking-tight">
-            Nuestros últimos trabajos de Marketing Digital Integral
+            Casos de éxito
           </h1>
         </div>
       </header>
