@@ -7,13 +7,14 @@ import Timeline from '../components/Timeline';
 import Portfolio from '../components/Portfolio';
 import FAQSection from '../components/Faq';
 import Footer from '../components/Footer';
+import ServiceSection from '../components/ServiceSection';
 
 function HomePage() {
   return (
     <>
       <Navbar />
       <HeroSection />
-      <Services />
+      <ServiceSection />
       <BentoGrid />
       <Timeline />  
       <Portfolio />

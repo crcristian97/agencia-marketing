@@ -1,8 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Timeline = () => {
   const timelineItems = [
-    
     {
       title: "Análisis y Estrategia",
       date: "Fase 1",
@@ -24,14 +24,38 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="py-24 px-4">      
+    <motion.div 
+      className="py-24 px-4"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >      
       <div className="max-w-7xl mx-auto">
-      <h2 className="text-5xl font-bold mb-16 px-4 sm:px-8 lg:px-16">
+        <motion.h2 
+          className="text-5xl font-bold mb-16 px-4 sm:px-8 lg:px-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           Nuestro <span className="text-violet-600">Proceso</span>
-        </h2>
+        </motion.h2>
         <div className="flex flex-col md:flex-row gap-8 px-4">
-          {timelineItems.map((item, index) => (
-            <div key={index} className="flex-1 relative">
+          {timelineItems.map(({ title, date, description }, index) => (
+            <motion.div 
+              key={index} 
+              className="flex-1 relative"
+              initial={{ opacity: 0, rotateY: -180 }}
+              whileInView={{ opacity: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 1.5,
+                delay: index * 0.2,
+                type: "spring",
+                stiffness: 60
+              }}
+            >
               {index < timelineItems.length - 1 && (
                 <div className="hidden md:block absolute top-8 -right-4 w-8 h-0.5 bg-violet-200" />
               )}
@@ -49,21 +73,21 @@ const Timeline = () => {
                     </svg>
                   </div>
                   <time className="text-lg font-semibold text-black">
-                    {item.date}
+                    {date}
                   </time>
                 </div>
                 <h3 className="text-2xl font-bold text-violet-600 mb-3">
-                  {item.title}
+                  {title}
                 </h3>
                 <p className="text-lg text-black">
-                  {item.description}
+                  {description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
