@@ -1,55 +1,72 @@
 import React from 'react';
 import { ArrowRight, Users, Target, ChartBarBig } from 'lucide-react';
+import imgHomeSeccion from '../img/imgHomeCTA.webp'
 
 export default function HeroSection() {
   return (
-    <div className="pt-20 pb-16 sm:pt-24 lg:overflow-hidden lg:pt-32">
+    <section className="pt-20 pb-16 sm:pt-24 lg:overflow-hidden lg:pt-32" aria-label="Sección principal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 relative">
-          {/* Línea divisoria vertical */}
           
           <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
             <div className="lg:py-24">
-              <h1 className="text-3xl font-bold tracking-tight text-black sm:text-3xl lg:mt-6 xl:text-5xl">
-                <span className="block">Soluciones IT</span>
-                <span className="block text-violet-600">para aumentar tus ventas</span>
+              <h1 className="text-2xl font-bold tracking-tight text-black sm:text-3xl lg:mt-6 xl:text-5xl">
+                <span className="block">Tus clientes buscan lo que necesitan.</span>
+                <span className="block text-violet-600">Te encuentran online y te contactan</span>
               </h1>
-              <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                Impulsamos tu presencia digital con estrategias innovadoras y resultados medibles. Convertimos visitantes en clientes leales.
-              </p>
+              
+              <div className="mt-3 space-y-2">
+                <p className="text-base text-black sm:text-xl lg:text-lg xl:text-xl">
+                  ¿Cómo?
+                </p>
+                <p className="text-base text-black sm:text-xl lg:text-lg xl:text-xl">
+                  Nosotros lo hacemos posible.
+                </p>
+              </div>
+
               <div className="mt-10 sm:mt-12">
-                <button className="inline-flex items-center rounded-full bg-violet-600 px-6 py-3 text-white hover:bg-violet-700">
-                  Mira lo que hacemos
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
+                <a 
+                   href="/ruta-destino" 
+                  className="inline-flex items-center rounded-full bg-violet-600 px-6 py-3 text-sm text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 transition-colors duration-200"
+                  aria-label="Solicitar más información"
+                >
+                  Quiero saber más
+                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                </a>
               </div>
               
-              <div className="mt-12 grid grid-cols-3 gap-4">
-                <div className="text-center">
-                  <ChartBarBig className="mx-auto h-8 w-8 text-violet-600" />
-                  <p className="mt-2 text-sm text-gray-600">CRM</p>
+              <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                  <Users className="mx-auto h-8 w-8 text-violet-600" aria-hidden="true" />
+                  <p className="mt-2 text-sm text-gray-600 font-medium">Desarrollo de Landing Page</p>
                 </div>
-                <div className="text-center">
-                  <Users className="mx-auto h-8 w-8 text-violet-600" />
-                  <p className="mt-2 text-sm text-gray-600">Social Media</p>
+                <div className="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                  <ChartBarBig className="mx-auto h-8 w-8 text-violet-600" aria-hidden="true" />
+                  <p className="mt-2 text-sm text-gray-600 font-medium">Soluciones CRM Personalizadas</p>
                 </div>
-                <div className="text-center">
-                  <Target className="mx-auto h-8 w-8 text-violet-600" />
-                  <p className="mt-2 text-sm text-gray-600">Marketing SEM</p>
+                <div className="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                  <Target className="mx-auto h-8 w-8 text-violet-600" aria-hidden="true" />
+                  <p className="mt-2 text-sm text-gray-600 font-medium">Ecommerce</p>
+                  <p className="mt-1 text-sm text-gray-600 font-medium">Tienda online</p>
                 </div>
               </div>
             </div>
           </div>
           
-            <div className="mt-32 max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-              <div className="relative w-64 h-64 mx-auto bg-violet-600 rounded-full flex flex-col items-center justify-center text-black cursor-pointer hover:bg-violet-700 transition-colors">
-                <p className="text-4xl font-bold text-center mt-7">Mira nuestros casos</p>
-                <ArrowRight className="h-8 w-8 transform rotate-90 text-white" />
-              </div>
-            </div>
+          <div className="mt-12 lg:mt-32 max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+            <img 
+              src={imgHomeSeccion}
+              alt="Casos de éxito en desarrollo web y marketing digital - We Make It Lab"
+              title="Casos de éxito We Make It Lab"
+              width={500}
+              height={500}
+              loading="lazy"
+              className="w-full h-auto rounded-lg shadow-lg object-cover hover:shadow-xl transition-shadow duration-300"
+              decoding="async"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    
+    </section>
   );
 }

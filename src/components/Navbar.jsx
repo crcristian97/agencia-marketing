@@ -13,8 +13,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <span className="text-2xl font-bold">
-              <span className="text-black">Agencia</span>
-              <span className="text-violet-600">Digital</span>
+              <span className="text-black">We make it </span>
+              <span className="text-violet-600">LAB</span>
             </span>
           </div>
           
@@ -22,7 +22,7 @@ export default function Navbar() {
             <div className="ml-10 flex items-center space-x-8">
               <Link to="/" className="text-gray-900 hover:text-violet-600">Home</Link>
               <a href="#servicios" className="text-gray-900 hover:text-violet-600">Servicios</a>
-              <a href="#portfolio" className="text-gray-900 hover:text-violet-600">Portfolio</a>
+              <a href="#casoexito" className="text-gray-900 hover:text-violet-600">Casos de éxito</a>
               <a href="#contacto" className="text-gray-900 hover:text-violet-600">Contacto</a>
               <button className="bg-violet-600 text-white px-6 py-2 rounded-full hover:bg-violet-700" onClick={redirectToGoogleCalendar}>
                 Agendar Reunión
