@@ -15,8 +15,8 @@ function HomePage() {
       <ServiceSection />
       <BentoGrid />
       <Timeline />  
-      <Form />
       <Portfolio />
+      <Form />
       <Footer />
     </>
   );  

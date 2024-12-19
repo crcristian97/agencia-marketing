@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const MarketingPortfolio = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 mt-10">
       <header className="py-20 bg-black text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold text-violet-600 mb-4 tracking-tight">

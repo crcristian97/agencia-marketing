@@ -17,9 +17,7 @@ const ServiceSection = () => {
             <Globe className="w-12 h-12 text-violet-600 mb-6" />
             <h3 className="text-violet-500 text-2xl font-bold mb-4">Activá</h3>
             <p className="text-violet-300">
-              tu <span className="text-violet-100 font-semibold">presencia digital</span> en buscadores de forma orgánica. Daremos
-              dinamismo a tus contenidos para que tu negocio se <span className="text-violet-100 font-semibold">posicione mejor
-              en los resultados de búsqueda</span>.
+              tu <span className="text-violet-100">presencia digital</span> en buscadores de manera orgánica. Haremos que tu negocio tenga cada día un mejor <span className="text-violet-100">posicionamiento en los resultados de búsqueda</span>.
             </p>
           </motion.div>
 
@@ -33,10 +31,8 @@ const ServiceSection = () => {
             <Rocket className="w-12 h-12 text-violet-600 mb-6" />
             <h3 className="text-violet-500 text-2xl font-bold mb-4">Impulsá</h3>
             <p className="text-violet-300">
-              Tu marca con una página simple de aterrizaje para recibir visitas
-              reales de clientes potenciales.
+              tu marca con una <span className="text-violet-100">landing page</span> que recibirá los visitantes de tu sitio y los convertirá en clientes.
             </p>
-            
           </motion.div>
 
           <motion.div
@@ -49,8 +45,7 @@ const ServiceSection = () => {
             <Users className="w-12 h-12 text-violet-600 mb-6" />
             <h3 className="text-violet-500 text-2xl font-bold mb-4">Conectá</h3>
             <p className="text-violet-300">
-              tu negocio al mundo digital con herramientas de recolección de
-              datos y conversión de interesados en clientes.
+              tu negocio al mundo digital con herramientas de analítica y recolección de datos. Esto permitirá la <span className="text-violet-100">conversión de clientes potenciales a clientes que realizan</span>.
             </p>
           </motion.div>
         </div>
