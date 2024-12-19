@@ -66,8 +66,8 @@ const Form = () => {
       className="max-w-2xl mx-auto p-8 bg-gray-100/95 backdrop-blur-md rounded-xl shadow-2xl mt-10"
       id="contacto"
     >
-      <h2 className="text-4xl font-bold mb-4 text-gray-800 text-center">Déjanos tus datos</h2>
-      <p className="mb-8 text-gray-600 text-center text-lg">Y te contactamos en menos de 24hs</p>
+      <h2 className="text-4xl font-bold mb-4 text-gray-800 text-center">Dejanos tus datos</h2>
+      <p className="mb-8 text-gray-600 text-center text-lg font-bold">y te contactamos en menos de 24hs</p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <motion.div variants={inputVariants} whileFocus="focus">
@@ -155,7 +155,7 @@ const Form = () => {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full bg-violet-600 text-white py-4 rounded-lg font-semibold hover:bg-violet-700 transition-all duration-200 text-lg shadow-lg hover:shadow-xl"
+          className="w-full bg-[#4AD4B9] text-black py-4 rounded-lg font-semibold hover:bg-[#4AD4B9] transition-all duration-200 text-lg shadow-lg hover:shadow-xl"
           type="submit"
         >
           Enviar

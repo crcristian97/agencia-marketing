@@ -52,7 +52,7 @@ const ServiceSection = () => {
         <div className="flex justify-center">
           <a 
             href="#contacto"
-            className="inline-block mt-6 px-6 py-3 bg-[#4AD4B9] text-white rounded-lg hover:bg-[#4AD4B9] transition-colors font-bold"
+            className="inline-block mt-6 px-6 py-3 bg-[#4AD4B9] text-black rounded-lg hover:bg-[#4AD4B9] transition-colors font-bold"
             title="Solicitar servicio de impulso digital"
             rel="nofollow"
             aria-label="Solicitar información sobre servicios digitales"
