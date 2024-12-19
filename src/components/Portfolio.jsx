@@ -7,7 +7,7 @@ const MarketingPortfolio = () => {
     <div className="bg-gray-100 mt-10">
       <header className="py-20 bg-black text-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold text-violet-600 mb-4 tracking-tight">
+          <h1 className="text-5xl font-bold text-[#4AD4B9] mb-4 tracking-tight">
             Casos de éxito
           </h1>
         </div>
