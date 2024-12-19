@@ -33,7 +33,7 @@ export default function HeroSection() {
 
               <div className="mt-10 sm:mt-12">
                 <a 
-                  href="#" 
+                  href="#serviciosSection" 
                   className="inline-flex items-center rounded-full bg-violet-600 px-6 py-3 text-sm text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 transition-colors duration-200"
                   aria-label="Solicitar más información"
                 >

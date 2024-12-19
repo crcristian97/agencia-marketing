@@ -21,8 +21,8 @@ export default function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <Link to="/" className="text-gray-900 hover:text-violet-600">Home</Link>
-              <a href="#servicios" className="text-gray-900 hover:text-violet-600">Servicios</a>
-              <a href="#casoexito" className="text-gray-900 hover:text-violet-600">Casos de éxito</a>
+              <a href="#serviciosSection" className="text-gray-900 hover:text-violet-600">Servicios</a>
+              <a href="#casoExitoSection" className="text-gray-900 hover:text-violet-600">Casos de éxito</a>
               <a href="#contacto" className="text-gray-900 hover:text-violet-600">Contacto</a>
               <button className="bg-violet-600 text-white px-6 py-2 rounded-full hover:bg-violet-700" onClick={redirectToGoogleCalendar}>
                 Agendar Reunión
@@ -44,8 +44,8 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            <a href="#servicios" className="block px-3 py-2 text-gray-900 hover:text-violet-600">Servicios</a>
-            <a href="#casoexito" className="block px-3 py-2 text-gray-900 hover:text-violet-600">Casos de éxito</a>
+            <a href="#serviciosSection" className="block px-3 py-2 text-gray-900 hover:text-violet-600">Servicios</a>
+            <a href="#casoExitoSection" className="block px-3 py-2 text-gray-900 hover:text-violet-600">Casos de éxito</a>
             <a href="#contacto" className="block px-3 py-2 text-gray-900 hover:text-violet-600">Contacto</a>
             <button className="w-full mt-2 bg-violet-600 text-white px-6 py-2 rounded-full hover:bg-violet-700">
               Empezar Ahora

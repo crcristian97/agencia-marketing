@@ -51,7 +51,7 @@ const ServiceSection = () => {
         </div>
         <div className="flex justify-center">
           <a 
-            href="#contact"
+            href="#contacto"
             className="inline-block mt-6 px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors"
             title="Solicitar servicio de impulso digital"
             rel="nofollow"
