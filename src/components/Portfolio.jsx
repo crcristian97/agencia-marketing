@@ -38,9 +38,9 @@ const MarketingPortfolio = () => {
                   <span className="text-sm text-violet-600 font-medium">
                     {category}
                   </span>
-                  <h3 className="text-xl font-bold mt-2 text-gray-900">
+                  <h1 className="text-xl font-bold mt-2 text-gray-900">
                     {title}
-                  </h3>
+                  </h1>
                 </div>
               </div>
             ))}

@@ -34,7 +34,7 @@ export default function HeroSection() {
               <div className="mt-10 sm:mt-12">
                 <a 
                   href="#serviciosSection" 
-                  className="inline-flex items-center rounded-full bg-[#4AD4B9] px-6 py-3 text-sm font-bold text-white hover:bg-[#4AD4B9] focus:outline-none focus:ring-2 focus:ring-[#4AD4B9] focus:ring-offset-2 transition-colors duration-200"
+                  className="inline-flex items-center rounded-full bg-[#4AD4B9] px-6 py-3 text-sm font-bold text-black hover:bg-[#4AD4B9] focus:outline-none focus:ring-2 focus:ring-[#4AD4B9] focus:ring-offset-2 transition-colors duration-200"
                   aria-label="Solicitar más información"
                 >
                   Quiero saber más

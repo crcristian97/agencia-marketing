@@ -5,8 +5,6 @@ import fiestaParty from '../img/fiestaParty.webp';
 import electronecWeb from '../img/electronecWeb.webp';
 import estudioJuridico from '../img/estudioJuridico.webp';
 
-
-
 export const items = [
     {
       id: "1",

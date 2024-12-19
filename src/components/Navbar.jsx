@@ -24,7 +24,7 @@ export default function Navbar() {
               <a href="#serviciosSection" className="text-gray-900 hover:text-[#4AD4B9]">Servicios</a>
               <a href="#casoExitoSection" className="text-gray-900 hover:text-[#4AD4B9]">Casos de éxito</a>
               <a href="#contacto" className="text-gray-900 hover:text-[#4AD4B9]">Contacto</a>
-              <button className="bg-[#4AD4B9] text-white px-6 py-2 rounded-full hover:bg-[#4AD4B9]" onClick={redirectToGoogleCalendar}>
+              <button className="bg-[#4AD4B9] text-black px-6 py-2 rounded-full hover:bg-[#4AD4B9]" onClick={redirectToGoogleCalendar}>
                 Agendar Reunión
               </button>
             </div>
@@ -34,6 +34,8 @@ export default function Navbar() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-900"
+              aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
