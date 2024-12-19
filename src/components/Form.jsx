@@ -66,8 +66,8 @@ const Form = () => {
       className="max-w-2xl mx-auto p-8 bg-gray-100/95 backdrop-blur-md rounded-xl shadow-2xl mt-10"
       id="contacto"
     >
-      <h2 className="text-4xl font-bold mb-4 text-gray-800 text-center">Dejanos tus datos</h2>
-      <p className="mb-8 text-gray-600 text-center text-lg font-bold">y te contactamos en menos de 24hs</p>
+      <h1 className="text-3xl font-bold text-[#2B7EB6] mb-4 text-center">Dejanos tus datos</h1>
+      <p className="mb-8 text-gray-600 text-center text-lg">y te contactamos en <span className="font-bold">menos de 24hs</span></p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <motion.div variants={inputVariants} whileFocus="focus">

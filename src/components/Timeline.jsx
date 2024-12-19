@@ -39,7 +39,7 @@ const Timeline = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Nuestro <span className="text-violet-600">Proceso</span>
+          Nuestro <span className="text-[#2B7EB6]">Proceso</span>
         </motion.h2>
         <div className="flex flex-col md:flex-row gap-8 px-4">
           {timelineItems.map(({ title, date, description }, index) => (
@@ -63,7 +63,7 @@ const Timeline = () => {
                 <div className="flex items-center mb-4">
                   <div className="flex items-center justify-center w-8 h-8 bg-violet-100 rounded-full mr-3">
                     <svg
-                      className="w-3 h-3 text-violet-800"
+                      className="w-3 h-3 text-[#4AD4B9]"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -76,7 +76,7 @@ const Timeline = () => {
                     {date}
                   </time>
                 </div>
-                <h3 className="text-2xl font-bold text-[#4AD4B9] mb-3">
+                <h3 className="text-2xl font-bold text-[#2B7EB6] mb-3">
                   {title}
                 </h3>
                 <p className="text-lg text-black">
