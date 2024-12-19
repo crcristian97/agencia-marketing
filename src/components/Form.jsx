@@ -64,6 +64,7 @@ const Form = () => {
       viewport={{ once: true }}
       variants={formVariants}
       className="max-w-2xl mx-auto p-8 bg-gray-100/95 backdrop-blur-md rounded-xl shadow-2xl mt-10"
+      id="contacto"
     >
       <h2 className="text-4xl font-bold mb-4 text-gray-800 text-center">Déjanos tus datos</h2>
       <p className="mb-8 text-gray-600 text-center text-lg">Y te contactamos en menos de 24hs</p>

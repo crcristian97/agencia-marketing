@@ -13,10 +13,10 @@ function HomePage() {
       <Navbar />
       <HeroSection />
       <ServiceSection />
+      <Form />
       <BentoGrid />
       <Timeline />  
       <Portfolio />
-      <Form />
       <Footer />
     </>
   );  
