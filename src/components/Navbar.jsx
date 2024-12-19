@@ -14,17 +14,17 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <span className="text-2xl font-bold">
               <span className="text-black">We make it </span>
-              <span className="text-violet-600">LAB</span>
+              <span className="text-[#4AD4B9]">LAB</span>
             </span>
           </div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              <Link to="/" className="text-gray-900 hover:text-violet-600">Home</Link>
-              <a href="#serviciosSection" className="text-gray-900 hover:text-violet-600">Servicios</a>
-              <a href="#casoExitoSection" className="text-gray-900 hover:text-violet-600">Casos de éxito</a>
-              <a href="#contacto" className="text-gray-900 hover:text-violet-600">Contacto</a>
-              <button className="bg-violet-600 text-white px-6 py-2 rounded-full hover:bg-violet-700" onClick={redirectToGoogleCalendar}>
+              <Link to="/" className="text-gray-900 hover:text-[#4AD4B9]">Home</Link>
+              <a href="#serviciosSection" className="text-gray-900 hover:text-[#4AD4B9]">Servicios</a>
+              <a href="#casoExitoSection" className="text-gray-900 hover:text-[#4AD4B9]">Casos de éxito</a>
+              <a href="#contacto" className="text-gray-900 hover:text-[#4AD4B9]">Contacto</a>
+              <button className="bg-[#4AD4B9] text-white px-6 py-2 rounded-full hover:bg-[#4AD4B9]" onClick={redirectToGoogleCalendar}>
                 Agendar Reunión
               </button>
             </div>
@@ -44,10 +44,10 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            <a href="#serviciosSection" className="block px-3 py-2 text-gray-900 hover:text-violet-600">Servicios</a>
-            <a href="#casoExitoSection" className="block px-3 py-2 text-gray-900 hover:text-violet-600">Casos de éxito</a>
-            <a href="#contacto" className="block px-3 py-2 text-gray-900 hover:text-violet-600">Contacto</a>
-            <button className="w-full mt-2 bg-violet-600 text-white px-6 py-2 rounded-full hover:bg-violet-700">
+            <a href="#serviciosSection" className="block px-3 py-2 text-gray-900 hover:text-[#4AD4B9]">Servicios</a>
+            <a href="#casoExitoSection" className="block px-3 py-2 text-gray-900 hover:text-[#4AD4B9]">Casos de éxito</a>
+            <a href="#contacto" className="block px-3 py-2 text-gray-900 hover:text-[#4AD4B9]">Contacto</a>
+            <button className="w-full mt-2 bg-[#4AD4B9] text-white px-6 py-2 rounded-full hover:bg-[#4AD4B9]">
               Empezar Ahora
             </button>
           </div>

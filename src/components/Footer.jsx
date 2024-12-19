@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center space-y-6">
           <h2 className="text-3xl font-bold">
             <span className="text-white">We make it </span>
-            <span className="text-violet-600">LAB</span>
+            <span className="text-[#4AD4B9]">LAB</span>
           </h2>
 
           <div className="space-y-2 text-gray-300">

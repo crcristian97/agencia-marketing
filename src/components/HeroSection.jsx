@@ -19,7 +19,7 @@ export default function HeroSection() {
             <div className="lg:py-24">
               <h1 className="text-2xl font-bold tracking-tight text-black sm:text-3xl lg:mt-6 xl:text-5xl">
                 <span className="block">Tus clientes buscan lo que necesitan.</span>
-                <span className="block text-violet-600">Te encuentran online y te contactan</span>
+                <span className="block text-[#2B7EB6]">Te encuentran online y te contactan</span>
               </h1>
               
               <div className="mt-3 space-y-2">
@@ -34,7 +34,7 @@ export default function HeroSection() {
               <div className="mt-10 sm:mt-12">
                 <a 
                   href="#serviciosSection" 
-                  className="inline-flex items-center rounded-full bg-violet-600 px-6 py-3 text-sm text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 transition-colors duration-200"
+                  className="inline-flex items-center rounded-full bg-[#4AD4B9] px-6 py-3 text-sm font-bold text-white hover:bg-[#4AD4B9] focus:outline-none focus:ring-2 focus:ring-[#4AD4B9] focus:ring-offset-2 transition-colors duration-200"
                   aria-label="Solicitar más información"
                 >
                   Quiero saber más
@@ -44,15 +44,15 @@ export default function HeroSection() {
               
               <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div className="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                  <Users className="mx-auto h-8 w-8 text-violet-600" aria-hidden="true" />
+                  <Users className="mx-auto h-8 w-8 text-[#4AD4B9]" aria-hidden="true" />
                   <p className="mt-2 text-sm text-gray-600 font-medium">Desarrollo de Landing Page</p>
                 </div>
                 <div className="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                  <ChartBarBig className="mx-auto h-8 w-8 text-violet-600" aria-hidden="true" />
+                  <ChartBarBig className="mx-auto h-8 w-8 text-[#4AD4B9]" aria-hidden="true" />
                   <p className="mt-2 text-sm text-gray-600 font-medium">Soluciones CRM Personalizadas</p>
                 </div>
                 <div className="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                  <Target className="mx-auto h-8 w-8 text-violet-600" aria-hidden="true" />
+                  <Target className="mx-auto h-8 w-8 text-[#4AD4B9]" aria-hidden="true" />
                   <p className="mt-2 text-sm text-gray-600 font-medium">Ecommerce</p>
                   <p className="mt-1 text-sm text-gray-600 font-medium">Tienda online</p>
                 </div>

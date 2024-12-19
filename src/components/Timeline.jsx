@@ -76,7 +76,7 @@ const Timeline = () => {
                     {date}
                   </time>
                 </div>
-                <h3 className="text-2xl font-bold text-violet-600 mb-3">
+                <h3 className="text-2xl font-bold text-[#4AD4B9] mb-3">
                   {title}
                 </h3>
                 <p className="text-lg text-black">
