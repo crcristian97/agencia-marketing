@@ -46,7 +46,7 @@ export default function Navbar() {
             <a href="#serviciosSection" className="block px-3 py-2 text-gray-900 hover:text-[#4AD4B9]">Servicios</a>
             <a href="#casoExitoSection" className="block px-3 py-2 text-gray-900 hover:text-[#4AD4B9]">Casos de éxito</a>
             <a href="#contacto" className="block px-3 py-2 text-gray-900 hover:text-[#4AD4B9]">Contacto</a>
-            <button className="w-full mt-2 bg-[#4AD4B9] text-white px-6 py-2 rounded-full hover:bg-[#4AD4B9]">
+            <button className="w-full mt-2 bg-[#4AD4B9] text-white px-6 py-2 rounded-full hover:bg-[#4AD4B9]" aria-label="Agendar una cita a través de Calendly" onClick={redirectToCalendar}>
               Empezar Ahora
             </button>
           </div>
