@@ -1,34 +1,20 @@
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-
+import { handleSubmitEmail } from '../apis/sendEmail';
+import Spinner from './Spinner';
+import MessageAlert from './MessageAlert';
 const Form = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
-    telefono: '',
     rubro: '',
     mensaje: ''
   });
 
   const [showThanks, setShowThanks] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-    setShowThanks(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({
-        nombre: '',
-        email: '',
-        telefono: '',
-        rubro: '',
-        mensaje: ''
-      });
-      setShowThanks(false);
-    }, 3000);
-  };
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -37,43 +23,42 @@ const Form = () => {
     });
   };
 
-  const formVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.6 }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      await handleSubmitEmail(form.current);
+      setShowThanks(true);
+      setError(null);
+      setTimeout(() => {
+        setFormData({
+          nombre: '',
+          email: '',
+          rubro: '',
+          mensaje: ''
+        });
+      }, 7000);
+    } catch (err) {
+      MessageAlert('error', 'Error al enviar el correo. Inténtalo de nuevo.', 'Por favor, verifica los datos ingresados y intenta nuevamente.', 'Asegúrate de que los datos sean correctos y que tu conexión a internet sea estable.');
+    } finally {
+      setIsLoading(false);
     }
   };
-
-  const inputVariants = {
-    focus: { scale: 1.01 }
-  };
-
-  const rubros = [
-    'Indumentaria',
-    'Tecnología', 
-    'Productos al por menor',
-    'Otro'
-  ];
 
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={formVariants}
       className="max-w-2xl mx-auto p-8 bg-gray-100/95 backdrop-blur-md rounded-xl shadow-2xl mt-10"
       id="contacto"
     >
       <h1 className="text-3xl font-bold text-[#2B7EB6] mb-4 text-center">Dejanos tus datos</h1>
       <p className="mb-8 text-gray-600 text-center text-lg">y te contactamos en <span className="font-bold">menos de 24hs</span></p>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <motion.div variants={inputVariants} whileFocus="focus">
-          <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="nombre">
-            Nombre
-          </label>
+      <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+        <motion.div>
+          <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="nombre">Nombre</label>
           <input
             type="text"
             id="nombre"
@@ -86,10 +71,8 @@ const Form = () => {
           />
         </motion.div>
 
-        <motion.div variants={inputVariants} whileFocus="focus">
-          <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="email">
-            Mail
-          </label>
+        <motion.div>
+          <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="email">Mail</label>
           <input
             type="email"
             id="email"
@@ -102,25 +85,8 @@ const Form = () => {
           />
         </motion.div>
 
-        <motion.div variants={inputVariants} whileFocus="focus">
-          <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="telefono">
-            Teléfono
-          </label>
-          <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all duration-200"
-            onChange={handleChange}
-            value={formData.telefono}
-            placeholder="+54 (11) XXXX-XXXX"
-          />
-        </motion.div>
-
-        <motion.div variants={inputVariants} whileFocus="focus">
-          <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="rubro">
-            Rubro
-          </label>
+        <motion.div>
+          <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="rubro">Rubro</label>
           <select
             id="rubro"
             name="rubro"
@@ -129,18 +95,15 @@ const Form = () => {
             value={formData.rubro}
           >
             <option value="">Selecciona un rubro</option>
-            {rubros.map((rubro) => (
-              <option key={rubro} value={rubro}>
-                {rubro}
-              </option>
-            ))}
+            <option value="Indumentaria">Indumentaria</option>
+            <option value="Tecnología">Tecnología</option>
+            <option value="Productos al por menor">Productos al por menor</option>
+            <option value="Otro">Otro</option>
           </select>
         </motion.div>
 
-        <motion.div variants={inputVariants} whileFocus="focus">
-          <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="mensaje">
-            ¿En qué precisás ayuda?
-          </label>
+        <motion.div>
+          <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="mensaje">¿En qué precisás ayuda?</label>
           <textarea
             id="mensaje"
             name="mensaje"
@@ -157,8 +120,9 @@ const Form = () => {
           whileTap={{ scale: 0.98 }}
           className="w-full bg-[#4AD4B9] text-black py-4 rounded-lg font-semibold hover:bg-[#4AD4B9] transition-all duration-200 text-lg shadow-lg hover:shadow-xl"
           type="submit"
+          disabled={isLoading}
         >
-          Enviar
+          {isLoading ? <Spinner /> : 'Enviar'}
         </motion.button>
       </form>
 
@@ -169,9 +133,18 @@ const Form = () => {
           exit={{ opacity: 0, y: -20 }}
           className="mt-6 p-4 bg-violet-100 rounded-lg"
         >
-          <p className="text-center text-violet-700 font-medium">
-            ¡Gracias por contactarnos! En menos de 24 horas nos estaremos comunicando con vos.
-          </p>
+          <p className="text-center text-violet-700 font-medium">¡Gracias por contactarnos! En menos de 24 horas nos estaremos comunicando con vos.</p>
+        </motion.div>
+      )}
+
+      {error && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="mt-6 p-4 bg-red-100 rounded-lg"
+        >
+          <p className="text-center text-red-700 font-medium">{error}</p>
         </motion.div>
       )}
     </motion.div>
