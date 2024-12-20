@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link  } from 'react-router-dom'
 import { Menu, X } from 'lucide-react';
-import { redirectToGoogleCalendar } from '../utils/redirectToGoogleCalendar';
+import { redirectToCalendar } from '../utils/redirectToCalendar';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -21,7 +21,7 @@ export default function Navbar() {
               <a href="#serviciosSection" className="text-gray-900 hover:text-[#4AD4B9]">Servicios</a>
               <a href="#casoExitoSection" className="text-gray-900 hover:text-[#4AD4B9]">Casos de éxito</a>
               <a href="#contacto" className="text-gray-900 hover:text-[#4AD4B9]">Contacto</a>
-              <button className="bg-[#4AD4B9] text-black px-6 py-2 rounded-full hover:bg-[#4AD4B9]" onClick={redirectToGoogleCalendar}>
+              <button className="bg-[#4AD4B9] text-black px-6 py-2 rounded-full hover:bg-[#4AD4B9]" aria-label="Agendar una cita a través de Calendly" onClick={redirectToCalendar}>
                 Agendar Reunión
               </button>
             </div>
